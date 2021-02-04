@@ -125,6 +125,62 @@ p {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: annonce1;
+}
+
+.annonce2 {
+  grid-area: annonce2;
+}
+
+.pied-page {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: pied-page;
+}
+
+.entete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+}
+
+.entete section {
+  display: inherit;
+  -webkit-box-orient: inherit;
+  -webkit-box-direction: inherit;
+      -ms-flex-direction: inherit;
+          flex-direction: inherit;
+  -webkit-box-pack: inherit;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+  width: 40%;
+}
+
+.entete section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: blue;
+  width: 50px;
+  height: 50px;
+}
+
+.annonce1 {
   background-color: #efebc5;
   color: #5e6e81;
   border-radius: 10px;
@@ -149,7 +205,6 @@ p {
   margin: 20px;
   background-color: #efebc5;
   color: #1c2127;
-  grid-area: annonce2;
 }
 
 .annonce2 section {
@@ -172,10 +227,82 @@ p {
   grid-area: principal;
 }
 
-.pied-page {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: pied-page;
+.principal h3 {
+  margin: 0 auto;
+  padding: 1rem 0 1rem;
+}
+
+/* ---------------------------------------
+animations
+------------------------------------------ */
+/* ---------------------------------------
+animation de la page d'acceuil
+------------------------------------------ */
+.animation div {
+  -webkit-animation: animEntete 1s both cubic-bezier(0.1, 1.08, 1, 1.17);
+          animation: animEntete 1s both cubic-bezier(0.1, 1.08, 1, 1.17);
+}
+
+@-webkit-keyframes animEntete {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes animEntete {
+  0% {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+/*
+.animation div:nth-last-of-type(1){
+    animation-delay: 1s ;
+}
+.animation div:nth-last-of-type(2){
+    animation-delay: 1.5s ;
+}
+.animation div:nth-last-of-type(3){
+    animation-delay: 2s ;
+}
+.animation div:nth-last-of-type(4){
+    animation-delay: 2.5s ;
+}
+.animation div:nth-last-of-type(5){
+    animation-delay: 3s ;
+}*/
+.animation div:nth-last-of-type(1) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.animation div:nth-last-of-type(2) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.animation div:nth-last-of-type(3) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.animation div:nth-last-of-type(4) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+.animation div:nth-last-of-type(5) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 /*# sourceMappingURL=style.css.map */
