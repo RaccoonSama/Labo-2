@@ -131,6 +131,7 @@ p {
         flex-direction: inherit;
         justify-content: inherit;
         width: 40%;
+
         div {
             display: flex;
             align-items: center;
@@ -175,12 +176,60 @@ p {
 }
 
 .principal {
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     grid-area: principal;
+    position: relative;
     h3 {
-        margin: 0 auto;
+        position: relative;
         padding: 1rem 0 1rem;
-      }
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+   
 }
 
+.animation2 {
+    position: relative;
+    margin-top: 4rem;
+    overflow: hidden;
+    width: 90%;
+
+    div {
+        margin: 1rem auto;
+        text-align: center;
+        width: 50%;
+        border: 8px solid rgb(20, 20, 20);
+    }
+}
+.test-fix {
+
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+}
+
+.border-nice {
+  position: absolute;
+  clip-path: polygon(0% 0%, 0% 100%, 2% 100%, 2% 3%, 98% 3%, 98% 98%, 0 98%, 0 100%, 100% 100%, 100% 0);    width: 100%;
+ height: 100%;
+
+ 
+    background: linear-gradient(60deg,
+            hsl(224, 85%, 66%),
+            hsl(269, 85%, 66%),
+            hsl(314, 85%, 66%),
+            hsl(359, 85%, 66%),
+            hsl(44, 85%, 66%),
+            hsl(89, 85%, 66%),
+            hsl(134, 85%, 66%),
+            hsl(179, 85%, 66%));
+            background-size: 300% 300%;
+            background-position: 0 50%;
+
+            animation: moveGradient 4s alternate infinite;
+}

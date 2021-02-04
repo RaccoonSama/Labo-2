@@ -32,3 +32,25 @@ animation de la page d'acceuil
         animation-delay: .5 * $i#{s} ;
     }
 }
+
+.animation2 div{
+ 
+    animation: animPrincipal 1s both;
+}
+
+@keyframes animPrincipal {
+    0%{   transform : translateY(-1000px); };
+    100%{transform : translateY(0); };
+}
+
+@for $a from 1 through 3 {
+    .animation2 div:nth-last-of-type(#{$a}) {
+        animation-delay: .5 * $a#{s};
+    }
+}
+
+@keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+  }
